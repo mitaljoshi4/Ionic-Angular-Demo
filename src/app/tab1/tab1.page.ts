@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { DetailModalPagePage } from '../detail-modal-page/detail-modal-page.page';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab1',
@@ -8,7 +10,7 @@ import { Component } from '@angular/core';
 export class Tab1Page {
   currentEnable: number = 1;
   inProgress: boolean = true;
-  constructor() { }
+  constructor(private modalController: ModalController) { }
 
   checkDisability(status) {
     return this.currentEnable == status ? false : true;
@@ -18,6 +20,7 @@ export class Tab1Page {
       this.currentEnable = this.currentEnable + 1;
     } else {
       this.currentEnable = 1
+      this.presentDetailModal();
     }
   }
   getImageURL(status) {
@@ -28,5 +31,12 @@ export class Tab1Page {
     } else {
       return "./assets/animatcons/activity.gif";
     }
+  }
+  async presentDetailModal() {
+    const modal = await this.modalController.create({
+      component: DetailModalPagePage,
+      cssClass: 'my-custom-class'
+    });
+    return await modal.present();
   }
 }
