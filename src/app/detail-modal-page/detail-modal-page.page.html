@@ -1,10 +1,67 @@
 <ion-header>
   <ion-toolbar>
     <ion-icon slot="start" name="close-outline" size="large" (click)="dismiss()"></ion-icon>
-    <ion-title>detailModalPage</ion-title>
+    <ion-title>Order Detail</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content text-center>
+  <ion-grid>
+    <ion-row>
+      <ion-col text-center>
+        <div style="text-align: center;">
+          <img size="large" src='./assets/animatcons/check.gif' />
+          <p>Order</p>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="2">
+          <img size="large" src='./assets/animatcons/check.gif' />
+      </ion-col>
+      <ion-col>
+        <p>Item Name 1</p>
+        <p>Rs 120</p>
+      </ion-col>
+      <ion-col size="1">
+          <img size="small" src='./assets/animatcons/check.gif' />
+      </ion-col>
+      <ion-col size="2">
+        <p>2</p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col size="2">
+            <img size="large" src='./assets/animatcons/check.gif' />
+        </ion-col>
+        <ion-col>
+          <p>Item Name 1</p>
+          <p>Rs 120</p>
+        </ion-col>
+        <ion-col size="1">
+            <img size="small" src='./assets/animatcons/check.gif' />
+        </ion-col>
+        <ion-col size="2">
+          <p>2</p>
+        </ion-col>
+      </ion-row>
+      <ion-item-divider></ion-item-divider>
+      <ion-row>
+        <ion-col style="text-align: center;">
+          <p>TOTAL</p>
+        </ion-col>
+        <ion-col style="text-align: center;">
+            <p>440</p>
+            <p>Cash on Delivery</p>
+          </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col style="text-align: center;">
+            <p>Delivered by Rider Name</p>
+          </ion-col>
+          <ion-col style="text-align: center;">
+              <p><img size="small" src='./assets/animatcons/check.gif' /></p>
+            </ion-col>
+        </ion-row>
+  </ion-grid>
 </ion-content>
